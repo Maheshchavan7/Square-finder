@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <center>
+    
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </nav>
+
+      <h1>Square Calculator</h1>
+      <form onsubmit="find()">
+      <input type="number" placeholder="enter a number" id="num"> <br> <br>
+      <input type="submit">
+      </form>
+    </center>
+    <script>
+        function find()
+        {
+            event.preventDefault();
+            let num=document.getElementById("num");
+        
+            if(num.value===""){
+                alert("please enter a number");
+                num.focus();
+                return;
+            }
+            let n = parseFloat(num.value);
+            let r = n*n;
+            let ans= r.toFixed(2);
+            localStorage.setItem("res",ans);
+            window.location.href="result.html";
+        }
+    </script>
+</body>
+</html>

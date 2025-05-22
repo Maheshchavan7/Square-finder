@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </nav>
+        <h1>Result Page</h1>
+        <h2 id="msg"></h2>
+    </center>
+    <script>
+        let msg=document.getElementById("msg");
+        let res=localStorage.getItem("res");
+        msg.innerHTML="Square is : " +res;
+    </script>   
+</body>
+</html>
